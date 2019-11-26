@@ -15,7 +15,8 @@ export class VideoPlayerComponent implements OnInit {
   endVideoEmitter: EventEmitter<any> = new EventEmitter<any>();
 
   public player: YT.Player;
-
+  public showQuestion: boolean;
+  private intervalQuestion: any;
 
   constructor() {}
 
@@ -23,6 +24,24 @@ export class VideoPlayerComponent implements OnInit {
 
   public savePlayer(player) {
     this.player = player;
+    this.player.playVideo();
+    this.startObserver();
+  }
+
+  private startObserver() {
+    if (this.video.hasQuestion) {
+      this.intervalQuestion = setInterval(() => {
+        if (this.player.getCurrentTime() > this.video.question.second) {
+          clearInterval(this.intervalQuestion);
+          this.showQuestion = true;
+          this.player.pauseVideo();
+        }
+      }, 1000);
+    }
+  }
+
+  public continueVideo() {
+    this.showQuestion = false;
     this.player.playVideo();
   }
 

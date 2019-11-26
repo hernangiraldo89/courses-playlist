@@ -10,3 +10,8 @@
   <h1>{{ video.title }}</h1>
   <p>{{ video.description }}</p>
 </ng-container>
+
+<div class="question" *ngIf="showQuestion">
+  <h2>{{ video.question.question }}</h2>
+  <button (click)="continueVideo()">Continuar</button>
+</div>

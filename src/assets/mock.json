@@ -4,34 +4,50 @@
     "title": "Rick's Big Gamble on Monster Red | Gold Rush",
     "url": "Omm-qb0-52E",
     "description": "Rick takes a huge gamble by purchasing the Hoffman crew's former wash plant, Monster Red.",
-    "watched": false
+    "watched": false,
+    "hasQuestion": true,
+    "question": {
+      "second": 5,
+      "question": "Pregunta video 1?"
+    }
   },
   {
     "id": 2,
     "title": "Parker Hits Nearly A Half-Million Dollars in One Week! | Gold Rush",
     "url": "h_qRPXyZZ1o",
     "description": "After a disappointing bedrock test, Parker and team weigh out their gold total for the week. ",
-    "watched": false
+    "watched": false,
+    "hasQuestion": true,
+    "question": {
+      "second": 10,
+      "question": "Pregunta video 2?"
+    }
   },
   {
     "id": 3,
     "title": "Tony Discovers an Abandoned Mine Shaft! | Gold Rush",
     "url": "RgY1e2E_k2Q",
     "description": "While prospecting a new claim, Tony Beets and his family unearth an old mine shaft from the ",
-    "watched": false
+    "watched": false,
+    "hasQuestion": false,
+    "question": {}
   },
   {
     "id": 4,
     "title": "The Beets Are Back on Track! | Gold Rush",
     "url": "akjJM0GHnFM",
     "description": "Mike Beets delivers a huge pay day for the family! ",
-    "watched": false
+    "watched": false,
+    "hasQuestion": false,
+    "question": {}
   },
   {
     "id": 5,
     "title": "Parker Picks His New Foreman | Gold Rush",
     "url": "TWp5yW7-vz4",
     "description": "At the gold weigh, Parker announces his choice to be his new foreman. ",
-    "watched": false
+    "watched": false,
+    "hasQuestion": false,
+    "question": {}
   }
 ]
