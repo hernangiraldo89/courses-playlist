@@ -14,15 +14,22 @@ export class VideoPlayerComponent implements OnInit {
   @Output()
   endVideoEmitter: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  public player: YT.Player;
 
-  ngOnInit() {
-    setTimeout(() => {
-      this.endVideoEmitter.emit();
-    }, 20000);
+
+  constructor() {}
+
+  ngOnInit() {}
+
+  public savePlayer(player) {
+    this.player = player;
+    this.player.playVideo();
   }
 
-  public test() {
-    console.log('test')
+  public onStateChange(event) {
+    if (event.data === 0) {
+      console.log(event.data)
+      this.endVideoEmitter.emit();
+    }
   }
 }

@@ -7,6 +7,8 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { FormsModule } from '@angular/forms';
 
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
