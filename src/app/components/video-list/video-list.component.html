@@ -1,0 +1,4 @@
+<div class="video" *ngFor="let video of videos; index as i" (click)="changeVideo(video, i)" [ngClass]="{ current: i === currentIndex }">
+  <input  disabled type="checkbox" [(ngModel)]="video.watched" />
+  <span>{{ video.title }}</span>
+</div>
