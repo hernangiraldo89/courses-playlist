@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
       setTimeout(() => {
         this.currentVideo = videos[0];
         this.currentVideoIndex = 0;
-      }, 2000);
+      }, 1000);
     });
   }
 
@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
 
       setTimeout(() => {
         this.currentVideo = video;
-      }, 2000);
+      }, 1000);
     }
   }
 
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
         this.currentVideoIndex += 1;
         this.currentVideo = this.videos[this.currentVideoIndex];
         return;
-      }, 2000);
+      }, 1000);
     } else {
       this.currentVideo = null;
     }
