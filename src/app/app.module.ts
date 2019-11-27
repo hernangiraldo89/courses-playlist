@@ -8,6 +8,7 @@ import { VideoListComponent } from './components/video-list/video-list.component
 import { FormsModule } from '@angular/forms';
 
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    NgxYoutubePlayerModule.forRoot()
+    NgxYoutubePlayerModule.forRoot(),
+    SweetAlert2Module.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

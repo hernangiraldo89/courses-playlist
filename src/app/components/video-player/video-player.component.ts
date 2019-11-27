@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Video } from '../../interfaces/Video';
+import { SweetAlert2LoaderService } from '@sweetalert2/ngx-sweetalert2';
 
 @Component({
   selector: 'app-video-player',
@@ -18,7 +19,9 @@ export class VideoPlayerComponent implements OnInit {
   public showQuestion: boolean;
   private intervalQuestion: any;
 
-  constructor() {}
+  constructor(
+    private s: SweetAlert2LoaderService
+  ) {}
 
   ngOnInit() {}
 
@@ -50,5 +53,11 @@ export class VideoPlayerComponent implements OnInit {
       console.log(event.data)
       this.endVideoEmitter.emit();
     }
+  }
+
+  public saveEmail(question: string) {
+    const currentTime = this.player.getCurrentTime();
+    this.player.playVideo();
+    alert(`Tiempo: ${currentTime} - Pregunta: ${question}`);
   }
 }

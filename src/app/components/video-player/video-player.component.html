@@ -6,6 +6,11 @@
     (change)="onStateChange($event)"
     (ready)="savePlayer($event)"
   ></youtube-player>
+  <button
+    (click)="player.pauseVideo()"
+    [swal]="{ title: 'Ingresa tu pregunta', input: 'text' }"
+    (confirm)="saveEmail($event)"
+  >Preguntar</button>
   <hr/>
   <h1>{{ video.title }}</h1>
   <p>{{ video.description }}</p>
